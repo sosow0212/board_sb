@@ -15,6 +15,8 @@ public class BoardController {
     private BoardService boardService;
 
 
+
+
     @GetMapping("/board/write") // localhost:8090/board/write 접속시 "boardwrite.html"을 보여준다
     public String boardWriteForm() {
         return "boardwrite";
@@ -24,7 +26,7 @@ public class BoardController {
     @PostMapping("/board/writepro")
     public String boardWritePro(Board board) { // 매개변수가 많아질 수 있으니, 클래스를 받음
         boardService.write(board);
-        return "";
+        return "redirect:/board/list";
     }
 
 
