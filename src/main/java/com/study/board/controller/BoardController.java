@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller // 컨트롤러임을 알려주는 어노테이션
 public class BoardController {
 
-    @GetMapping("/")
-    @ResponseBody
-    public String main() {
+    @GetMapping("/board/write") // localhost:8090/board/write 접속시 "boardwrite.html"을 보여준다
+    public String boardWriteForm() {
 
-        return "Hello world";
+        return "boardwrite";
     }
 }
