@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <title>Welcome board</title>
 </head>
+
+<style>
+    .container {
+
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 100px;
+    }
+
+    .main {
+        display: flex;
+        flex-display: column;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+    }
+
+    .main a {
+        margin: 0 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+</style>
+
 <body>
-  <h1>Welcome board</h1>
-  <a href="/board/write">글쓰기</a>
-  <a href="/board/list">글목록</a>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome board</h1>
+        </div>
+
+        <div class="main">
+            <a href="/board/write">글쓰기</a>
+            <a href="/board/list">글목록</a>
+        </div>
+    </div>
+
+
 </body>
 </html>
