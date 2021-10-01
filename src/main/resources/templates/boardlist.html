@@ -6,6 +6,16 @@
 </head>
 
 <style>
+    .header {
+        display: flex;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .header a:nth-child(2) {
+        margin-left: 25px;
+    }
+
     .layout {
         width: 500px;
         margin: 0 auto;
@@ -14,25 +24,29 @@
 </style>
 
 <body>
-  <div class="layout">
-      <a href="/">Home</a>
-      <table>
-          <thead>
+    <div class="header">
+        <a href="/">Home</a>
+        <a href="/board/write">글쓰기</a>
+    </div>
+
+    <div class="layout">
+        <table>
+            <thead>
             <tr>
                 <th>글번호</th>
                 <th>제목</th>
             </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
             <tr th:each="board : ${list}">
                 <td th:text="${board.id}">1</td>
-<!--               localhost:8090/board/view?id=board.id -->
+                <!--               localhost:8090/board/view?id=board.id -->
                 <td>
                     <a th:text="${board.title}" th:href="@{/board/view(id=${board.id})}">제목입니다.</a>
                 </td>
             </tr>
-          </tbody>
-      </table>
-  </div>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
