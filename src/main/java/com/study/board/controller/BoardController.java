@@ -14,9 +14,6 @@ public class BoardController {
     @Autowired
     private BoardService boardService;
 
-
-
-
     @GetMapping("/board/write") // localhost:8090/board/write 접속시 "boardwrite.html"을 보여준다
     public String boardWriteForm() {
         return "boardwrite";
